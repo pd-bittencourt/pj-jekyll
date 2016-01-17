@@ -1,0 +1,146 @@
+.home-wrap 
+	header
+		width: 135px
+		background: white
+		padding: 30px 0
+
+		// Em conjunto com .home-wrap display:flex
+		.header-position
+			position: fixed
+			top: 20px
+			left: 0
+			bottom: 20px
+			width: 135px // para manter do tamanho da .home-wrap header
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+		.logo
+			+hide-text
+			max-width: 135px // para manter o tam no responsive-nav
+			background: 
+				image: url(/assets/img/logo-pb.svg)
+				repeat: no-repeat
+				position: center
+				// color: pink
+			padding: 0
+			margin: 0
+			height: 60px
+
+		.site-nav
+			ul
+				list-style: none
+				margin: 20px 0
+				padding: 0 20px 0 0 
+				text-align: right
+				// background: pink
+
+				li
+					margin-bottom: 10px
+					// background: gray
+
+					&:last-child
+						margin-bottom: 0
+
+		.email-link
+			// background: pink
+			display: block
+			padding: 0 20px 0 0 
+			text-align: right
+
+		// responsive nav button wrap
+		.mobile-nav-toggle
+			display: none //só existir com 775px width
+			width: 50px
+			height: 50px
+			// background: pink
+			margin-right: 20px
+			align-items: center
+			
+			// responsive nav button tracinhos
+			span,
+			span:before,
+			span:after
+				content: ""
+				display: block
+				height: 2px
+				width: 100%
+				background: #333
+				position: relative
+
+				transition: all .3s ease-in-out
+
+			span:before
+				bottom: 15px
+
+			span:after
+				top: 13px
+
+			//is-fdsafsa
+			&.is-open span
+				background: transparent
+
+			&.is-open span:before,
+			&.is-open span:after,
+				transform-origin: center
+				transform: rotate(45deg)
+				top: 0
+				bottom: 0
+		
+			&.is-open span:after
+				transform: rotate(-45deg)
+
+	//Mobile Nav
+	.mobile-nav
+		display: none
+		position: absolute
+		width: 100%
+		// height: 100%
+		background: white
+		padding: 45px 0 20px
+		//animation
+		transform: translateY(-100%)
+		transition: all .3s ease-in-out
+
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+			li
+				text-align: center
+				margin-bottom: 10px
+							
+
+
+// Responsive Navigation
+@media (max-width: 775px)
+	.home-wrap 
+		header
+			width: auto
+			padding: 20px 0
+
+			.header-position
+				width: auto // foi necessario para não ficar do tam da tela
+				position: relative
+				top: auto
+				bottom: auto
+				left: auto
+				flex-direction: row
+				align-items: center
+
+			.site-nav,
+			.email-link
+				display: none
+
+			.logo
+				height: 50px
+
+			.mobile-nav-toggle
+				display: flex
+
+		.mobile-nav.is-open
+			display: block
+			transform: translateY(0)
+

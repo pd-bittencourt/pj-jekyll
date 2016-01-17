@@ -1,0 +1,21 @@
+mixin nav-content()
+	ul
+		li: a(href="#sobre") Sobre
+		li: a(href="#youtube") YouTube
+		li: a(href="#articles") Articles
+		li: a(href="#design") Design
+		li: a(href="#contato") Contato
+
+
+//mobile navigation .is-open JS
+.mobile-nav.is-open
+	+nav-content()
+
+// main navigation
+header
+	.header-position
+		h1.logo Pedro Bittencourt Studio
+		nav.site-nav
+			+nav-content()
+		a(href="mailto:pedrodmbc@gmail.com").email-link +email me
+		.mobile-nav-toggle: span
