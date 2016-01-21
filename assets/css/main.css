@@ -362,29 +362,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
 .gigantic {
-  font-size: 110px;
+  font-size: 6.875rem;
   line-height: 1.09;
   letter-spacing: -2px; }
 
 .huge, h1 {
-  font-size: 68px;
+  font-size: 4.25rem;
   line-height: 1.05;
   letter-spacing: -1px; }
 
 .large, h2 {
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 1.14; }
 
 .bigger, h3 {
-  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 1.38; }
 
 .big, h4 {
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 1.38; }
 
 .small, small {
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.2; }
 
 p {
@@ -434,9 +434,9 @@ body {
 
 body {
   background: #F6F6F8;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
-  font-family: 'Open Sans' sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -584,6 +584,27 @@ body {
         -ms-transform: translateY(0);
             transform: translateY(0); } }
 
+section.about {
+  background-image: url(../img/img-chamada.jpg);
+  background-size: cover;
+  background-position: center center; }
+  section.about h2 {
+    color: #770055;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: -100px;
+    margin-top: 0; }
+  section.about .home-lead {
+    padding-bottom: 100px;
+    color: #333; }
+
+@media (max-width: 640px) {
+  section.about h2, section.about .home-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; } }
+
 .home-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -624,22 +645,22 @@ body {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
         -ms-flex-order: -1;
-            order: -1;
-    background: lightblue; }
+            order: -1; }
 
 .col-1 {
   max-width: 300px;
-  margin: 0 10px;
-  background: pink; }
+  margin: 0 10px; }
 
 .col-2 {
   max-width: 620px;
-  margin: 0 10px;
-  background: honeydew; }
+  margin: 0 10px; }
 
 .col-50 {
   width: 50%;
   background: yellow; }
+
+.push-right {
+  margin-left: 330px; }
 
 @media (max-width: 640px) {
   .home-sections .flex {
@@ -647,4 +668,10 @@ body {
   .col-1 {
     max-width: 100%; }
   .col-50 {
-    width: auto; } }
+    width: auto; }
+  .push-right {
+    margin-left: 10px; } }
+
+.home-lead {
+  font-size: 2rem;
+  line-height: 1.2; }
