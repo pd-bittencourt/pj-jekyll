@@ -1,0 +1,56 @@
+####HomeBrew
+	- instala packages no osa via Ruby
+	- pode instalar o nodeJS
+	- instala o xcode
+
+####NodeJS
+	- Download and install (instala automaticamente o NPM)
+
+####NPM (Node Package Manager)
+	//nope instalar via Homebrew (brew update - brew install npm)
+	//nope instala via command line (sudo npm install npm -g)
+	- npm ls (lista packages)
+	- npm update (upgrade npm packages)
+
+####Bower
+	- manager web
+	- instala via npm command line (sudo npm install -g bower)
+
+####RVM, RBENV Ruby-Build (ruby version managers)
+	- brew install rbenv ruby-build 
+	- eval "$(rbenv init -)"    // olha => https://github.com/rbenv/rbenv#installation
+
+####RUBY 
+	- rbenv install -—list
+	- rbenv install 2.2.3
+	- rbenv global 2.2.3
+	- rbenv version
+	- ruby -v
+
+####Bourbon
+	- SASS library
+	- bower install bourbon (locally)
+
+####GulpJS
+	- task runner (compiler)
+	- instala via npm command line (sudo npm install -g gulp)
+	// http://quenchjs.com/ ==> how gulp works
+
+####GruntJS
+	- task runner (não uso!)
+
+
+##Browser Sync
+	- npm install browser-sync
+
+##Gulp-autoprefixer
+	- npm install --save-dev gulp-autoprefixer 
+
+##Gulp-sass
+	- npm install gulp-sass
+
+##Gulp-jade
+	- npm instal gulp-jade
+
+##npm-check-updates
+	- npm install -g npm-check-updates

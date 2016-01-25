@@ -1,0 +1,74 @@
+####	Project Wish List
+	1. Jekyll
+	2. Jade
+	3. SASS
+	4. Autoprefixer
+	5. Browser Sync (Gulp - SASS, Autoprefixer, Browser Sync)
+
+
+####1	Pre-Installation	
+	1 - Install xcode (se não estiver instalado - homebrew faz o trabalho)
+	2 - Install Homebrew (brew doctor)
+	3 - Install rbenv & ruby-build (brew install rbenv ruby-build)
+	4 - Install Bower (sudo npm install -g bower)
+	5 - Install Ruby via rbenv 
+	  . rbenv install 2.2.3 (https://gorails.com/setup/osx/10.11-el-capitan)
+	  . rbenv global 2.2.3
+	  . ruby -v
+	####Nope#### - Install Ruby (brew install ruby)
+
+####2	Basic Installation	
+	1 - Download ZIP - https://github.com/shakyShane/jekyll-gulp-sass-browser-sync
+	2 - Install Jekyll (gem install jekyll)
+	3 - Install NodeJS (use installer)
+	4 - Install Gulp (sudo npm install -g gulp)
+	5 - Install locally jekyll-gulp-sass-browser-sync-master 
+		cd Desktop/jekyll-gulp-sass-browser-sync-master/
+		npm install (sudo)
+
+	6 - Install red carpet (gem install red carpet)
+	7 - Install pigments (gem install pygments.rb)
+
+  ##2a	Jade for Gulp
+	1 - npm install gulp-jade —save-dev (sudo)
+	2 - gulp file - (var jade = require('gulp-jade’);)
+	3 - gulp file - (compile jade from _jadefiles folder to _includes folder)
+	  . create _jadefiles folder / _includes folder
+	4 - gulp file - gulp.watch('_jadefiles/*.jade', ['jade']);
+
+  ##2b	Browser Sync
+	1 - , notify: false
+
+  ##2c	SASS
+	1 - restructure of the folders (assets/css/..)
+	  . 0-tools	==>	1-tools (normalize/bourbon/vars/fonts)
+	  . 1-base	==>	2-basics (links/selection-colors/typogr/buttons/body-elem)
+	  . 2-modules	==>	3-modules
+	  . 3-layouts	==>	4-pages
+	  . main.css
+	  . main.scss
+
+	2 - gulp file - redirect reference css to new folders
+	3 - gulp file - gulp.watch('assets/css/**', ['sass']);
+
+
+####3	CSS Tools/Base	
+	1 - tools normalize.css
+	2 - tools bourbon (sudo gem install bourbon)(bourbon install)
+	3 - base _base.sass
+	4 - base _vars.sass
+
+####4	_config.yml
+	1 - delete highlighter: pygments or rouge or null
+	2 - rename name:
+
+############ sudo npm update ############
+	
+##### GitHub #####
+	1 - download github to desktop
+	2 - .gitignore (gitignore.io OSX Jekyll Sass)
+	
+	3 - add local path
+	4 - Commit (Sumary)
+	5 - Publish (Description)
+	
