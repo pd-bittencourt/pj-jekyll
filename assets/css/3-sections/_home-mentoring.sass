@@ -1,0 +1,107 @@
+section.mentoring
+	background:
+		image: url(../img/img-header.jpg)
+		size: cover
+		position: center
+	color: white
+	overflow: hidden
+
+
+	.home-cta
+		color: #333
+
+	.home-lead
+		padding-top: 200px
+
+	.faces
+		list-style: none
+		margin: -50px 0
+		height: calc(100% + 100px)
+		padding: 0
+		position: relative // to face be relative to that!
+		top: 800px // to make faces appear whe scrolling from the top
+		transition: all .4s ease-in-out
+		// background: pink
+
+		&.launched
+			top: 0px // to make possible the 1st transition
+
+	.face
+		height: 80px
+		width: 80px
+		border-radius: 50%
+		background:
+			size: cover
+			position: center
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
+		box-shadow: 0 4px 8px rgba(black, .4)
+		position: relative
+		cursor: pointer
+
+		&.back-btn
+			background: url(../img/back-icon.svg) center no-repeat
+			background-size: 40%
+			box-shadow: none
+			display: none
+
+
+	.face.has-bubble-open .bubble
+		display: block
+
+	.bubble
+		opacity: 0
+		position: absolute
+		left: 100%
+		bottom: 50%
+		width: 300px
+		margin-left: 15px
+		background: rgba(black, .6)
+		padding: 20px
+		border: 2px solid white
+		border-radius: 40px 40px 40px 5px
+		pointer-events: none
+		transition: all .2s cubic-bezier(0.55, 0, 0.4, 1.43)
+		transform: scale(0)
+		transform-origin: bottom left
+
+
+	.face.has-bubble-open .bubble
+		opacity: 1
+		transform: scale(1)
+
+
+
+@media (max-width: 640px)
+	section.mentoring
+
+
+		.faces
+			margin: 0
+			width: 115px *6
+			top: 230px
+			left: 0
+
+
+		.face
+			display: inline-block
+			margin-left: 35px
+
+			&:last-child
+				margin-bottom: 35px
+
+			&.back-btn
+				display: inline-block
+
+		.bubble
+			bottom: 100px
+			left: 0
+			box-sizing: border-box
+			margin-left: 0
+
+
+
+
+
+

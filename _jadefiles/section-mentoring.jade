@@ -1,0 +1,20 @@
+mixin face(face, words, name)
+	li.face(style="background-image: url(#{face});")
+		.bubble
+			p #{words}
+			cite - #{name}
+
+section.mentoring
+	.flex.flex--center
+		.col-1
+			ul.faces
+				+face("http://fillmurray.com/80/110","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Nathan Jacobs")
+				+face("http://fillmurray.com/80/180","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Nathan Jacobs")
+				+face("http://fillmurray.com/80/90","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Nathan Jacobs")
+				+face("http://fillmurray.com/80/100","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Nathan Jacobs")
+				+face("http://fillmurray.com/80/80","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Nathan Jacobs")
+				li.back-btn.face
+
+		.col-1
+			p.home-lead.outdented ...Lorem ipsum dolor sit amet.
+			a(href="").home-cta Title here
