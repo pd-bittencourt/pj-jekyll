@@ -1,3 +1,6 @@
+*
+	box-sizing: border-box
+
 .home-wrap
 	display: flex
 	// ao inves de min-height: 100vh -> position: fixed no filho
@@ -15,6 +18,7 @@
 	.flex
 		display: flex
 		flex-direction: row
+		// background: #f1f1f1
 	
 	.flex--center
 		justify-content: center
@@ -30,18 +34,18 @@
 
 // columns
 .col-1
-	max-width: 300px
-	margin: 0 10px
+	width: 300px
+	padding: 0 10px
 	// background: pink
 
 .col-2
-	max-width: 620px
-	margin: 0 10px
+	width: 620px
+	padding: 0 10px
 	// background: honeydew
 
 .col-50
 	width: 50%
-	background: yellow
+	// background: yellow
 
 .push-right
 	margin-left: 330px
@@ -51,16 +55,22 @@
 	.home-sections .flex
 		display: block
 
-	.col-1
-		max-width: 100%
-
-	.col-50
+	.col-1, .col-2, .col-50
 		width: auto
+		text-align: center
 
 	.push-right
 		margin-left: 10px
+		
+		@media (max-width: 640px)
+			margin-left: 0
 
 // Typography
 .home-lead
 	font-size: 2rem
 	line-height: 1.2
+
+	&.outdented
+		text-indent: -.8em
+		@media (max-width: 830px)
+			text-indent: 0

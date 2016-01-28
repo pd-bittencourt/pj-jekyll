@@ -1,0 +1,45 @@
+section.youtube
+	background:
+		image: url(../img/img-massinha.jpg)
+		position: center
+		size: cover
+
+	.home-cta
+		color: $accent-color
+
+	.flex-video
+		box-shadow: 0 4px 40px 3px rgba(black, .5)
+		transform: scale(1.4)
+
+		@media (max-width: 1000px)
+			transform: scale(1)
+
+	.col-1
+		position: relative
+		height: 400px //just to get a little bit more room
+		display: flex
+		flex-direction: column
+		justify-content: center
+		
+		@media (max-width: 640px)
+			// width: 100%
+			height: auto
+			padding: 50px 20px
+
+	.video-strip
+		position: absolute
+		top: 0
+		margin: -50px 0
+		width: 100%
+		height: calc(100% + 100px)
+		background: 
+			image: url(../img/img-strip.png)
+			position: center 0px
+			repeat: repeat-y
+			size: 70%
+		opacity: .4
+		
+		@media (max-width: 640px)
+			display: none
+		
+
