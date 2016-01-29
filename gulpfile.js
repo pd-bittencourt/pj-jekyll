@@ -44,7 +44,7 @@ gulp.task('sass', function () {
     return gulp.src('assets/css/main.scss')
         .pipe(sass({
             includePaths: ['css'],
-            onError: browserSync.notify
+            // onError: browserSync.notify  --prevent stopping server on sass error
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'))
@@ -70,7 +70,9 @@ gulp.task('jade', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['assets/js/**'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
 

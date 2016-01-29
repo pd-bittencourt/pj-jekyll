@@ -779,6 +779,56 @@ section.mentoring {
             box-sizing: border-box;
     margin-left: 0; } }
 
+.articles {
+  background-image: url(../img/img-gaussianblurs-012.jpg);
+  background-size: cover; }
+  .articles .article-wrap {
+    margin: -50px 0; }
+    .articles .article-wrap::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .articles .article-thumb {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    float: left;
+    position: relative;
+    overflow: hidden; }
+    .articles .article-thumb:after {
+      content: '';
+      display: block;
+      padding-top: 100%; }
+  .articles .article-meta {
+    position: absolute;
+    background: rgba(173, 216, 230, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    opacity: 0;
+    -webkit-transform: translate(0%, 100%) scale(0.5);
+        -ms-transform: translate(0%, 100%) scale(0.5);
+            transform: translate(0%, 100%) scale(0.5);
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out; }
+    .articles .article-meta .name {
+      font-size: 14px; }
+    .articles .article-meta .date {
+      font-size: 12px;
+      font-style: italic; }
+  .articles .article-thumb:hover .article-meta {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%) scale(1);
+        -ms-transform: translate(0%, 0%) scale(1);
+            transform: translate(0%, 0%) scale(1); }
+  @media (max-width: 640px) {
+    .articles .desc-wrap {
+      margin-top: 50px; } }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -856,7 +906,7 @@ section.mentoring {
   .home-sections .flex {
     display: block; }
   .col-1, .col-2, .col-50 {
-    width: auto;
+    width: 100%;
     text-align: center; }
   .push-right {
     margin-left: 10px; } }

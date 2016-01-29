@@ -1,0 +1,53 @@
+.articles
+	background:
+		image: url(../img/img-gaussianblurs-012.jpg)
+		size: cover
+
+	.article-wrap
+		margin: -50px 0
+		+clearfix //bourbon clearfix
+
+	.article-thumb
+		display: block
+		background: 
+			size: cover
+			position: center
+		width: 25%
+		float: left
+		position: relative
+		overflow: hidden
+
+		// after element - padding pega o tamanho do width (position relative required) 
+		&:after
+			content: ''
+			display: block
+			padding-top: 100%
+
+	.article-meta
+		position: absolute
+		background: rgba(lightblue, .6)
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 10px
+		color: white
+		opacity: 0
+		transform: translate(0%, 100%) scale(.5)
+		transition: all 200ms ease-in-out
+
+		.name
+			font-size: 14px
+
+		.date
+			font-size: 12px
+			font-style: italic
+
+	.article-thumb:hover .article-meta
+		opacity: 1
+		transform: translate(0%, 0%) scale(1)
+
+
+	@media (max-width: 640px)
+		.desc-wrap
+			margin-top: 50px
