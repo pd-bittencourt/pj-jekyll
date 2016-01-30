@@ -1,28 +1,29 @@
-//- mixin thumb
-//- 	a(href="" style="background-image: url(http://fillmurray.com/200/230)").article-thumb
-//- 		.article-meta
-//- 			.name Article Name
-//- 			.date Dez 10, 2016
+mixin thumb
+		a(href="#" style="background-image: url(http://fillmurray.com/300/400)").article-thumb
+			.article-meta
+				.name Title Post
+				.date 10 dez 2015
 
 section.articles#articles
 	.flex.flex--center
 		
 		.col-50
 			.article-wrap
-				
-				{% for post in site.posts limit: 12 %}
-				
-				a(href="#" style="background-image: url(http://fillmurray.com/300/300)").article-thumb
-					.article-meta
-						.name {{post.title}}
-						.date {{post.date | date: "%b %d, %Y"}}
-				
-				{% endfor %}
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
+				+thumb
 
-		.col-50.flex.flex--center.order-first
+		.col-50.flex.flex--center<!--.order-first-->
 			.col-1
 				.desc-wrap
 					p.home-lead.outdented ...Lorem Ipsum Dolor Sit Amet...
 					a(href="#").home-cta Click Button
-
-

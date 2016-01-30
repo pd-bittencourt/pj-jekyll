@@ -1,7 +1,8 @@
 ---
 layout: default
 title: First post in Jekyll
-thumbnail: post-1.jpg
 ---
 
 {{post.title}}
+
+# content here

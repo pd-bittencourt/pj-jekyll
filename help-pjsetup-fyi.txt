@@ -54,3 +54,7 @@
 
 ##npm-check-updates
 	- npm install -g npm-check-updates
+
+##Jekyll
+	- Quick command references for Jekyll
+	- http://yizeng.me/2013/05/17/quick-rubygems-command-references-for-jekyll/

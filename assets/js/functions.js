@@ -1,7 +1,32 @@
 $(function(){
 	mentoringBubbleClick();
+	setInterval(function(){articleSwing();}, 3000);
+  smoothScroll(500);
 });
 
+//smoothScroll
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
+
+
+
+// article 
+function articleSwing(){
+	var randNum = Math.floor(Math.random() * $('.article-thumb').length)
+	$('.article-thumb').eq(randNum).addClass('is-emph')
+		.siblings().removeClass('is-emph');
+}
 
 // when I click a face
 // get the distance of the face from its parent
@@ -41,6 +66,7 @@ function mentoringBubbleClick() {
 $(window).scroll(function() {
 	youtubeVidScroll();
 	startMentoring();
+	startArticles();
 });
 
 function youtubeVidScroll() {
@@ -49,12 +75,29 @@ function youtubeVidScroll() {
 	$('.video-strip').css('background-position','center -'+ wScroll/2 +'px');
 
 }
+
+// Articles
+
+function startArticles(){
+	var wScroll = $(window).scrollTop();
+
+	if($('.articles').offset().top - $(window).height()/2 < wScroll) {
+		$('.article-thumb').each(function(i){
+			setTimeout(function(){
+				$('.article-thumb').eq(i).addClass('is-visible');
+			}, 300 * i);
+		});
+	}
+}
+
+
+
 // Mentoring bubbles
 function startMentoring() {
 	
 	var wScroll = $(window).scrollTop();
 	
-	if($('.mentoring').offset().top - $(window).height()/2 < wScroll) {
+	if($('section.mentoring').offset().top - $(window).height()/2 < wScroll) {
 		if($(window).width() > 640){
 			$('.faces').addClass('launched');
 				if(!$('.face').hasClass('has-bubble-open')){
